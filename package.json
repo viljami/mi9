@@ -1,0 +1,21 @@
+{
+  "name": "mi9",
+  "version": "0.0.1",
+  "description": "Dummy service",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha src/**/*.spec.js"
+  },
+  "keywords": [
+    "REST"
+  ],
+  "author": "Viljami Peltola",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
