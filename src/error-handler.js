@@ -6,10 +6,8 @@ var errors = {
 };
 
 module.exports = function(err, req, res, next){
-  if (err.status === 400 && err instanceof SyntaxError){
+  if (err instanceof SyntaxError){
     res.status(400).json(errors.json);
-    return;
-  }
-  next(err);
+  } else next(err);
 };
 

@@ -1,15 +1,14 @@
-var bodyParser = require('body-parser');
-var express = require('express');
-
+var bodyParser = require('./body-parser');
 var errorHandler = require('./error-handler');
+var App = require('./server');
 var showRouter = require('./show/show-router');
 
-var app = express();
+var app = new App();
 
 app.use(bodyParser.json({
   strict: true
 }));
-app.use('/', showRouter);
+app.use('*', showRouter);
 app.use(errorHandler);
 
 app.listen(3000);
