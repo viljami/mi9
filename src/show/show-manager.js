@@ -1,6 +1,9 @@
 
 module.exports = {
   filter: function(shows){
-    return {};
+    console.log('shows', shows);
+    return {
+      response: []
+    };
   }
 };
