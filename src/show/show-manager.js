@@ -11,7 +11,7 @@ function getDetails(show){
 module.exports = {
   filter: function(shows){
     return {
-      response: shows.map(getDetails).filter(function(a){ return !!a; })
+      response: Array.isArray(shows) ? shows.map(getDetails).filter(function(a){ return !!a; }) : []
     };
   }
 };
