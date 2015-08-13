@@ -1,6 +1,6 @@
 
 function getDetails(show){
-  if (show.drm && show.episodeCount > 0) return;
+  if (show.drm && show.episodeCount <= 0) return;
   return {
     image: show.image && show.image.showImage,
     slug: show.slug,
