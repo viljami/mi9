@@ -5,9 +5,7 @@ module.exports = function Response (res){
   };
 
   this.send = function(data){
-    console.log('send', data);
     res.write(data);
-    // res.end();
   };
 
   this.json = function(json){

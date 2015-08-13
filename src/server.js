@@ -14,7 +14,7 @@ function getErrorHandlers (listeners){
 function nextHandler (fn, handlers){
   var i = 0;
   var doNext = true;
-  function next(){ console.log('next'); doNext = true; }
+  function next(){ doNext = true; }
   while(i < handlers.length && doNext){
     doNext = false;
     fn(next, handlers[i]);
@@ -66,7 +66,6 @@ function App(){
         nextHandler(function(next, handler){
           handler(err, request, response, next);
         }, getErrorHandlers(me.listeners[path]));
-        console.log('catch', err);
       }
 
       res.end();
